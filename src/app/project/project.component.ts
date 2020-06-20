@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import * as DynamoDB from 'aws-sdk/clients/dynamodb';
+import { ProserveService } from '../proserve.service';
+
 
 @Component({
   selector: 'app-project',
@@ -10,14 +11,21 @@ import * as DynamoDB from 'aws-sdk/clients/dynamodb';
 export class ProjectComponent implements OnInit {
 
   slug: string;
-  private DynamoDB;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private proserve: ProserveService) {
+    
+   }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.slug = params.get('slug');
+      this.getproimg(this.slug);
+
     })
+  }
+  async getproimg(yark : string){
+    const result = await this.proserve.getProject(yark);
+    console.log(result);
   }
 
 }

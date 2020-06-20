@@ -11,6 +11,7 @@ import { ProjectComponent } from './project/project.component';
 
 import {MatBadgeModule} from '@angular/material/badge';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProserveService } from './proserve.service';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatBadgeModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ProserveService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
