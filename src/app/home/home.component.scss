@@ -1,5 +1,4 @@
-$dark:#31004a;
-$light:#ff00ff;
+@import "colors.scss";
 section {
     position: relative;
     width: 100vw;
@@ -28,8 +27,8 @@ section {
         z-index: 5;
         h1 {
             color: white;
-            font-size: 3rem;
-            font-weight: 900;
+            font-size: 3rem !important;
+            font-weight: 900!important;
         }
         .strikeit {
             opacity: 0.4;

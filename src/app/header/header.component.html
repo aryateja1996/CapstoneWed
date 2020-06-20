@@ -32,9 +32,23 @@
   </svg>
 
     <ul class="nav">
-        <li><a href="#" class="nav-link" routerLink="/contact">Contact Us</a></li>
-        <li><a href="#" class="nav-link" routerLink="/project">Project</a></li>
-        <li><a href="#" class="nav-link" routerLink="">Home</a></li>
+        <li><a class="nav-link" routerLink="/contact">Contact Us</a></li>
+        <li>
+            <div class="dropdown">
+                <button class="btn " type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <p>
+                    <span matBadge="4" matBadgeOverlap="false">Projects</span>
+                  </p>
+            </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <button class="dropdown-item" type="button">Mohinabad</button>
+                    <button class="dropdown-item" type="button">Kandi</button>
+                    <button class="dropdown-item" type="button">Aaraku</button>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a class="nav-link" routerLink="">Home</a></li>
     </ul>
 
 </header>

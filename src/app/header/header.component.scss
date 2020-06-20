@@ -1,5 +1,4 @@
-$dark:#31004a;
-$light:#ff00ff;
+@import "colors.scss";
 #header {
     position: fixed;
     z-index: 100;
@@ -25,11 +24,14 @@ $light:#ff00ff;
     li {
         display: inline;
         float: right;
+        .btn {
+            color: white
+        }
     }
     a {
         color: white;
     }
-    #nav-links {
+    .nav-links {
         display: block;
         padding: 8px;
         color: $light;
