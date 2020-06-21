@@ -9,42 +9,31 @@ export class ProserveService {
 
   dblist = {};
 
-  private _s3: S3;
+  private _s3: S3 = new S3();
   projects: any;
-  private _db: DynamoDB;
+  private _db: DynamoDB = new DynamoDB();
 
 
 
-  constructor() { this.configS3(); this.configDb(); }
+  constructor() { }
 
-  configS3() {
 
-    this._s3 = new S3({
-      apiVersion: '2006-03-01',
-      region: 'ap-south-1',
-    })
-  }
-  configDb() {
-
-    this._db = new DynamoDB({
-      apiVersion: '2012-08-10',
-      region: 'ap-south-1',
-    })
-  }
   getProjects() {
     const params = { TableName: 'projects' }
     return this._db.scan(params).promise();
 
   }
   getProject(slug: string) {
-    const params: DynamoDB.GetItemInput = {
-      TableName: 'projects', Key: {
-        "slug": {
-          S: slug
-        }
-      }
+    const params: DynamoDB.ScanInput = {
+      ExpressionAttributeValues: {
+        ":a": {
+          S: ""+slug
+         }
+       }, 
+      FilterExpression: 'slug = :a',
+      TableName: 'projects'
     }
-    return this._db.getItem(params).promise();
+    return this._db.scan(params).promise();
   }
   getProjectImages(imagefolder) {
     const params = {

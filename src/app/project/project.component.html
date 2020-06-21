@@ -1,1 +1,5 @@
-<p>project works!</p>
+<p *ngIf="project | async">{{(project | async).title}} works!</p>
+
+<ng-container *ngIf="(projectImages | async).length">
+    <img *ngFor="let projectImage of (projectImages | async)" width="300px" height="300px" style="object-fit: cover" [src]="projectImage.url" />
+</ng-container>
