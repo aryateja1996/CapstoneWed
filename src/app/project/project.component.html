@@ -1,5 +1,11 @@
-<p *ngIf="project | async">{{(project | async).title}} works!</p>
+<section class="project">
+    <p id="title" *ngIf="project | async">{{(project | async).title}}</p>
 
-<ng-container *ngIf="(projectImages | async).length">
-    <img *ngFor="let projectImage of (projectImages | async)" width="300px" height="300px" style="object-fit: cover" [src]="projectImage.url" />
-</ng-container>
+    <div id="pics">
+        <ng-container *ngIf="(projectImages | async).length">
+            <img *ngFor="let projectImage of (projectImages | async)" width="300px" height="300px" style="object-fit: cover" [src]="projectImage.url" />
+        </ng-container>
+    </div>
+
+
+</section>

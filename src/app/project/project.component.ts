@@ -11,6 +11,7 @@ import * as DynamoDB from 'aws-sdk/clients/dynamodb';
   styleUrls: ['./project.component.scss']
 })
 export class ProjectComponent implements OnInit {
+ 
 
   slug: string;
   project: BehaviorSubject<any> = new BehaviorSubject<any>(null);
@@ -26,6 +27,7 @@ export class ProjectComponent implements OnInit {
       this.getproimg(this.slug);
 
     })
+    
   }
   async getproimg(yark : string){
     const result = await this.proserve.getProject(yark);

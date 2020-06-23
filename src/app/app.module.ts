@@ -10,9 +10,20 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectComponent } from './project/project.component';
 
 import {MatBadgeModule} from '@angular/material/badge';
+// For MDB Angular Pro
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProserveService } from './proserve.service';
+import {HammerGestureConfig, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
+import * as Hammer from 'hammerjs';
 
+export class CustomHammerConfig extends HammerGestureConfig {
+  overrides = {
+    'bread': {
+      direction: Hammer.DIRECTION_ALL,
+    }
+  }
+}
 
 @NgModule({
   declarations: [
@@ -27,7 +38,7 @@ import { ProserveService } from './proserve.service';
     BrowserModule,
     AppRoutingModule,
     MatBadgeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [ProserveService],
   bootstrap: [AppComponent]
