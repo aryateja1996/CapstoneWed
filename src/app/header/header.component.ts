@@ -11,28 +11,25 @@ import { ProserveService } from '../proserve.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  
+
   private _db: db;
   projects: any[];
   title = 'cpstone';
   constructor(private proserve: ProserveService) {
-    this.configAws();
-    
-    
+
+
+
   }
 
   ngOnInit(): void {
-    
-  }
- 
 
-  
-
-  configAws() {
-    
   }
 
- 
+
+
+
+
+
 
 
 }

@@ -1,11 +1,16 @@
 <section class="project">
-    <p id="title" *ngIf="project | async">{{(project | async).title}}</p>
+    <img id="bg" src="/assets/images/homebg.jpg">
+    <div class="img-overlay"></div>
+    <div class="view">
+        <p id="title" *ngIf="project | async">{{(project | async).title}}</p>
 
-    <div id="pics">
-        <ng-container *ngIf="(projectImages | async).length">
-            <img *ngFor="let projectImage of (projectImages | async)" width="300px" height="300px" style="object-fit: cover" [src]="projectImage.url" />
-        </ng-container>
+        <div class="gallerize-example">
+            <p class="gal-container" gallerize>
+                <ng-container *ngIf="(projectImages | async).length">
+                    <img *ngFor="let projectImage of (projectImages | async)" width="250px" height="250px" style="object-fit: cover; margin:5px" [src]="projectImage.url" />
+                </ng-container>
+            </p>
+        </div>
     </div>
-
 
 </section>

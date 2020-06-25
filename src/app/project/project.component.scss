@@ -1,9 +1,36 @@
-@import "colors.scss";
-#title {
-    color: $f;
-    text-align: center;
-}
-
-#pics {
-    align-items: center;
-}
+    @import "colors.scss";
+    #title {
+        color: $f;
+        text-align: center;
+    }
+    
+    img#bg {
+        position: absolute;
+        width: 100%;
+        height: 200vh;
+        object-fit: cover;
+        pointer-events: none;
+        filter: blur(10px);
+    }
+    
+    #pics {
+        position: relative;
+    }
+    
+    .img-overlay {
+        position: absolute;
+        width: 100%;
+        height: 200vh;
+        background-color: black;
+        opacity: 0.8;
+        pointer-events: none;
+    }
+    
+    .view {
+        width: 100%;
+        justify-content: center;
+        top: 10vh;
+        position: relative;
+        align-items: center;
+        margin-left: 2vh;
+    }

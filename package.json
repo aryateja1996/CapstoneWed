@@ -25,6 +25,7 @@
         "@ngx-gallery/gallerize": "^5.0.0-beta.0",
         "@ngx-gallery/lightbox": "^5.0.0-beta.0",
         "@types/jquery": "^3.3.38",
+        "angular-tippy": "0.0.3",
         "aws-sdk": "^2.700.0",
         "bootstrap": "^4.5.0",
         "font-awesome": "^4.7.0",
@@ -33,8 +34,10 @@
         "mdbootstrap": "^4.19.1",
         "ng-gallery": "^5.0.0-beta.2",
         "ngx-gallery": "^5.10.0",
+        "ngx-lightbox": "^2.1.2",
         "rxjs": "~6.5.4",
         "screenfull": "^3.3.0",
+        "tippy.js": "^6.2.3",
         "tslib": "^1.10.0",
         "zone.js": "~0.10.2"
     },

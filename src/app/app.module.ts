@@ -9,9 +9,10 @@ import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectComponent } from './project/project.component';
 
-import {MatBadgeModule} from '@angular/material/badge';
-// For MDB Angular Pro
 
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { LightboxModule } from 'ng-gallery/lightbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProserveService } from './proserve.service';
 import {HammerGestureConfig, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
@@ -39,6 +40,8 @@ export class CustomHammerConfig extends HammerGestureConfig {
     AppRoutingModule,
     MatBadgeModule,
     BrowserAnimationsModule,
+    MatTooltipModule,
+    LightboxModule
   ],
   providers: [ProserveService],
   bootstrap: [AppComponent]
