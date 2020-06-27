@@ -11,7 +11,12 @@ import { ProserveService } from '../proserve.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  tooltipcontent=[
+    ["Name : Geetha","\n"],
+    ["Phone Number : 9963028580"],
+    ["Email : admin@capstonereality.com"]
 
+  ];
   private _db: db;
   projects: any[];
   title = 'cpstone';
@@ -24,7 +29,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
 
   }
-
+  
 
 
 
