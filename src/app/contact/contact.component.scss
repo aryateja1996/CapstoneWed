@@ -3,7 +3,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    //display: flex;
     align-items: center;
     max-width: 2000px;
     color: white;
@@ -22,6 +22,70 @@
         background-color: black;
         opacity: 0.8;
         pointer-events: none;
+    }
+    .contact-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 600px;
+        padding: 80px 40px;
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .contact-form h2 {
+        margin: 0;
+        padding: 0 0 20px;
+        color: $f;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .contact-form p {
+        margin: 0;
+        padding: 0;
+        color: $light;
+        font-weight: bold;
+    }
+    .contact-form input {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contact-form input[type=text] {
+        border: none;
+        border-radius: 10px;
+        border-bottom: 0.5px solid $light;
+        background: transparent;
+        outline: none;
+        height: 35px;
+        color: #fff;
+        font-size: 15px;
+    }
+    .contact-form input[type=number] {
+        border: none;
+        border-radius: 10px;
+        border-bottom: 0.5px solid $light;
+        background: transparent;
+        outline: none;
+        height: 35px;
+        color: #fff;
+        font-size: 15px;
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    .contact-form input[type=submit] {
+        height: 30px;
+        color: #fff;
+        font-size: 15px;
+        background: $dark;
+        cursor: pointer;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        margin-top: 30px;
     }
     mat-form-field {
         color: $light;
