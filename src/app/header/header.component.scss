@@ -9,37 +9,48 @@
     left: 0;
     right: 0;
     padding: 0 30px;
-    #logo {
-        position: relative;
-        top: 30%;
-        width: auto;
-        height: 40%;
-        margin: 20px;
+}
+
+#logo {
+    position: relative;
+    top: 30%;
+    width: auto;
+    height: 40%;
+    margin: 20px;
+}
+
+.nav {
+    display: inline;
+    position: relative;
+    top: 5vh;
+}
+
+li {
+    //display: inline;
+    float: right;
+    .btn {
+        color: white
     }
-    .nav {
-        display: inline;
-        position: relative;
-        top: 5vh;
+}
+
+a {
+    color: white;
+}
+
+.example-button {
+    margin-top: 16px;
+}
+
+.example-tooltip-red {
+    background: #b71c1c;
+}
+
+@media screen and (max-width:786px) {
+    svg {
+        display: none;
+        pointer-events: none;
     }
     li {
-        //display: inline;
-        float: right;
-        .btn {
-            color: white
-        }
-    }
-    a {
-        color: white;
-    }
-    .nav-links {
-        display: block;
-        padding: 8px;
-        color: $light;
-    }
-    .example-button {
-        margin-top: 16px;
-    }
-    .example-tooltip-red {
-        background: #b71c1c;
+        width: 90px;
     }
 }

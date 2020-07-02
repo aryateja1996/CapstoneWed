@@ -12,7 +12,7 @@
             <p id="content" *ngIf="project | async">{{(project | async).content[5]}}</p>
             <p id="content" *ngIf="project | async">{{(project | async).content[6]}}</p>
         </div>
-        <h1>Amenities</h1>
+        <h1 id="ami">Amenities</h1>
         <div class="amenities">
 
             <ul *ngIf="project | async">
@@ -38,7 +38,7 @@
         <div class="gallerize-example">
             <p class="gal-container" gallerize>
                 <ng-container *ngIf="(projectImages | async).length">
-                    <img *ngFor="let projectImage of (projectImages | async)" width="250px" height="250px" style="object-fit: cover; margin:5px" [src]="projectImage.url" />
+                    <img id="gallery" *ngFor="let projectImage of (projectImages | async)" [src]="projectImage.url" />
                 </ng-container>
             </p>
         </div>

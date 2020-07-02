@@ -101,3 +101,12 @@
         position: relative;
     }
 }
+
+@media screen and (max-width:786px) {
+    .contact-form {
+        width: 300px !important;
+        #details {
+            font-size: 14px;
+        }
+    }
+}
