@@ -9,14 +9,20 @@ import * as SESV2 from 'aws-sdk/clients/sesv2';
 })
 export class ContactComponent implements OnInit {
   private _ses: SESV2;
-  userName = $("#name").val();
-  userEmail = $("#email").val();
-  userPhone = $("#phone").val();
+  userName;
+  userEmail;
+  userPhone;
 
   constructor() { this.configSES(); }
 
   ngOnInit(): void {
-    
+    var send = document.getElementById("value");
+    send.onclick = () => {
+      this.userName = $("#name").val();
+      this.userEmail = $("#email").val();
+      this.userPhone = $("#phone").val();
+      this.paramsPassing;
+    }
   }
   private configSES() {
 
@@ -62,7 +68,10 @@ export class ContactComponent implements OnInit {
     this.sendEmail(war);
   }
 
-  sendit(){ 
+  getcon() {
+    this.userName = $("#name").val();
+    this.userEmail = $("#email").val();
+    this.userPhone = $("#phone").val();
     this.paramsPassing;
   }
 }
